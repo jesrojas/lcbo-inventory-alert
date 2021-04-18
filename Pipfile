@@ -6,10 +6,14 @@ name = "pypi"
 [packages]
 flask = "*"
 pymongo = "*"
-flask-cors = "==3.0.7"
+marshmallow = "*"
+flask-cors = "*"
+requests = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 pylint = "*"
+autopep8 = "*"
 
 [requires]
 python_version = "3.9"

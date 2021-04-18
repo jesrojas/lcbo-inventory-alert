@@ -12,14 +12,14 @@ Start MongoDB with Docker Compose:
 
 ```
 docker-compose up
-export MONGO_URL=mongodb://mongo_user:mongo_secret@0.0.0.0:27017/
+export MONGO_URL=mongodb://root:rootPass@localhost:27017/
 ```
 
 This guide assumes you're runing Python 3. `pipenv` is required for setting up the virtual environment.
 
 Start the Python backend:
 ```
-FLASK_APP=$PWD/server/server.py pipenv run python -m flask run --port 4433
+FLASK_APP=$PWD/server/server.py FLASK_ENV=development pipenv run python -m flask run --port 8080
 ```
 Start the React frontend:
 ```
@@ -38,3 +38,7 @@ Ctrl+Shift+P > Python: Select Interpreter > ('lcbo': pipenv)
 ```
 
 It should take your imports and auto-complete properly now.
+
+## DockerException: Error fetching server API
+
+Are you sure docker is running on your system? You can get that error when compose is not able to connect to docker via docker socket.
