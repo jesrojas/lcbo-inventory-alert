@@ -15,9 +15,11 @@ docker-compose up
 export MONGO_URL=mongodb://mongo_user:mongo_secret@0.0.0.0:27017/
 ```
 
+This guide assumes you're runing Python 3. `pipenv` is required for setting up the virtual environment.
+
 Start the Python backend:
 ```
-FLASK_APP=$PWD/app/http/api/endpoints.py FLASK_ENV=development pipenv run python -m flask run --port 4433
+FLASK_APP=$PWD/server/server.py pipenv run python -m flask run --port 4433
 ```
 Start the React frontend:
 ```
@@ -25,3 +27,14 @@ cd client
 npm i
 npm start
 ```
+
+# Common Issues
+
+## Python Interpreter not recognizing imports on VSCode
+
+That's because your interpreter is not the virtual environment interpreter. If you're on Windows:
+```
+Ctrl+Shift+P > Python: Select Interpreter > ('lcbo': pipenv) 
+```
+
+It should take your imports and auto-complete properly now.
