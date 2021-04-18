@@ -12,7 +12,7 @@ Start MongoDB with Docker Compose:
 
 ```
 docker-compose up
-export MONGO_URL=mongodb://root:rootPass@localhost:27017/
+export MONGO_URL=mongodb://root:rootPass@127.0.0.1:27017/
 ```
 
 This guide assumes you're runing Python 3. `pipenv` is required for setting up the virtual environment.

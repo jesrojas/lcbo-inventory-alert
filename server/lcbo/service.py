@@ -3,14 +3,13 @@ from ..repository.mongo import MongoRepository
 from .schema import ItemSchema
 
 
-class Service():
+class Service:
     def __init__(self, repo_client=Repository(adapter=MongoRepository)):
         self.repo_client = repo_client
 
-    def find_all_item(self):
-        item = self.repo_client.find_all('items')
-        print(item)
-        # return [self.dump(item) for item in item]
+    def find_all_items(self):
+        items = self.repo_client.find_all({})
+        return [self.dump(item) for item in items]
 
     # def find_item(self, repo_id):
     #     item = self.repo_client.find(
@@ -32,9 +31,5 @@ class Service():
     #     return records_affected > 0
 
     def dump(self, data):
-        return ItemSchema(exclude=['_id']).dump(data).data
-
-    # def prepare_item(self, githubRepo):
-    #     data = githubRepo.data
-    #     data['user_id'] = self.user_id
-    #     return data
+        return ItemSchema().dump(data)
+ 

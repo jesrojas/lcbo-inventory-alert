@@ -2,7 +2,7 @@ import os
 import sys
 import json
 import requests
-import pymongo
+from pymongo import MongoClient
 from bs4 import BeautifulSoup
 
 
@@ -22,10 +22,8 @@ title = {}
 title['text'] = html_data.title.text
 
 string_db = os.environ.get('MONGO_URL')
-client = pymongo.MongoClient(string_db)
-
-db = client.db.inventory
-
+db = MongoClient(string_db).db.inventory
+print(db)
 try:
     db.insert_one(title)
     print(f'inserted {title}')

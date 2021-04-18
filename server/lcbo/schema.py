@@ -10,5 +10,5 @@ class GithubRepoSchema(Schema):
     repo_url = fields.URL()
 
 
-class ItemSchema(GithubRepoSchema):
-    user_id = fields.Email(required=True)
+class ItemSchema(Schema):
+    text = fields.Str()

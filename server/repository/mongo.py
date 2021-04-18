@@ -7,7 +7,7 @@ COLLECTION_NAME = 'inventory'
 class MongoRepository(object):
     def __init__(self):
         mongo_url = os.environ.get('MONGO_URL')
-        self.db = MongoClient(mongo_url).inventory
+        self.db = MongoClient(mongo_url).db
 
     def find_all(self, selector):
         return self.db.inventory.find(selector)
