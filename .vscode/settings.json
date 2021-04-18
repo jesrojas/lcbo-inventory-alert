@@ -1,3 +1,4 @@
 {
-  "python.pythonPath": "server\\Scripts\\python.exe"
+  "python.pythonPath": "C:\\Users\\Tomas Mejia\\.virtualenvs\\lcbo-inventory-alert-tXBSBk-5\\Scripts\\python.exe",
+  "python.linting.enabled": true
 }
