@@ -42,3 +42,5 @@ It should take your imports and auto-complete properly now.
 ## DockerException: Error fetching server API
 
 Are you sure docker is running on your system? You can get that error when compose is not able to connect to docker via docker socket.
+
+If the issue still persists, try to reset the Docker Desktop, and sign out your account from Docker Desktop. Sign in again and run the command again in your terminal.
