@@ -1,0 +1,40 @@
+$heading-font: 'Cormorant', serif;
+$primary-color: rgb(68, 4, 4);
+
+.hero_section {
+    min-height: 100vh;
+    background-image: url(../../assets/homepage/background_hero.jpg);
+    position: relative;
+    
+
+    .hero_heading {
+        width: 20vw;
+        padding-top: 1vmax;
+        padding-left: 1vmax;
+
+        &_letter {
+            display: block;
+            font-family: $heading-font;
+            font-size: 288px;
+            line-height: 0.64em;
+            color: $primary-color;
+
+            &:nth-child(even) {
+                padding-left: 3vmax;
+            }
+        }
+
+        &_absolute {
+            position: absolute;
+            bottom: 1vmax;
+            right: 1vmax;
+        }
+
+        &_second {
+            font-size: 144px;
+            font-family: $heading-font;
+            color: $primary-color;
+        }
+    }
+}
+
