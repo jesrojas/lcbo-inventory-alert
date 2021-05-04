@@ -26,6 +26,8 @@ Start the React frontend:
 cd client
 npm i
 npm start
+or
+yarn start
 ```
 
 # Common Issues
