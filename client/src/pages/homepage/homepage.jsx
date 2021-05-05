@@ -7,6 +7,8 @@ const HomePage = () => {
     return (
       <section className="hero_section">
           <Form/>
+          <span className="hero_heading_mobile">LCBO</span>
+          {/* <span className="hero_heading_mobile">Vigilant</span> */}
           <div className="hero_heading">
             <span className="hero_heading_letter">L</span>
             <span className="hero_heading_letter">C</span>

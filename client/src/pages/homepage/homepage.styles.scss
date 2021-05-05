@@ -4,17 +4,33 @@ $primary-color: rgb(68, 4, 4);
 .hero_section {
     min-height: 100vh;
     background-image: url(../../assets/homepage/background_hero.jpg);
+    background-size: cover;
+    background-position: top 50% left 0%;
+    background-repeat: no-repeat;
     position: relative;
-    
+    overflow: hidden;
+
+    @media screen and (max-width: 800px) {
+        background-position: top 50% left 80%;
+        min-height: 900px;
+    }
+
+    @media screen and (max-width: 479px) {
+        background-position: top 50% left 68%;
+    }
 
     .hero_heading {
         width: 20vw;
+        font-family: $heading-font;
         padding-top: 1vmax;
         padding-left: 1vmax;
 
+        @media screen and (max-width: 800px) {
+                display: none;
+        }
+
         &_letter {
             display: block;
-            font-family: $heading-font;
             font-size: 288px;
             line-height: 0.64em;
             color: $primary-color;
@@ -24,16 +40,42 @@ $primary-color: rgb(68, 4, 4);
             }
         }
 
+        &_mobile {
+            display: none;
+
+            @media screen and (max-width: 800px) {
+                display: flex;
+                justify-content: flex-end;
+                font-family: $heading-font;
+                font-size: 124px;
+                width: 90%;
+                color: $primary-color;
+            }
+
+            @media screen and (max-width: 479px) {
+                width: 100%;
+            }
+        }
+
         &_absolute {
             position: absolute;
             bottom: 1vmax;
             right: 1vmax;
+
+            @media screen and (max-width: 800px) {
+                bottom: 79.7%;
+                right: 10%;
+            }
         }
 
         &_second {
             font-size: 144px;
             font-family: $heading-font;
             color: $primary-color;
+
+            @media screen and (max-width: 800px) {
+                font-size: 64px;
+            }
         }
     }
 }
