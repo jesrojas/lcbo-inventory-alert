@@ -1,9 +1,10 @@
 $heading-font: 'Cormorant', serif;
 $primary-color: rgb(68, 4, 4);
+$secondary-color: rgb(150, 5, 5);
 
 .hero_section {
-    min-height: 100vh;
-    background-image: url(../../assets/homepage/background_hero.jpg);
+    min-height: 200vh;
+    background-image: url(../../assets/homepage/background_homepage.jpg);
     background-size: cover;
     background-position: top 50% left 0%;
     background-repeat: no-repeat;
@@ -32,9 +33,10 @@ $primary-color: rgb(68, 4, 4);
         &_letter {
             display: block;
             font-size: 288px;
-            line-height: 0.64em;
+            line-height: 0.66em;
             color: $primary-color;
 
+            
             &:nth-child(even) {
                 padding-left: 3vmax;
             }
@@ -49,7 +51,7 @@ $primary-color: rgb(68, 4, 4);
                 font-family: $heading-font;
                 font-size: 124px;
                 width: 90%;
-                color: $primary-color;
+                color: $secondary-color;
             }
 
             @media screen and (max-width: 479px) {
@@ -59,7 +61,7 @@ $primary-color: rgb(68, 4, 4);
 
         &_absolute {
             position: absolute;
-            bottom: 1vmax;
+            bottom: 50%;
             right: 1vmax;
 
             @media screen and (max-width: 800px) {
@@ -75,6 +77,7 @@ $primary-color: rgb(68, 4, 4);
 
             @media screen and (max-width: 800px) {
                 font-size: 64px;
+                color: $secondary-color;
             }
         }
     }
